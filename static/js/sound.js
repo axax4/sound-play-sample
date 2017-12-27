@@ -17,15 +17,16 @@ function init() {
 
 function load(){
   try {
-    loadSound('./static/sound/base.mp3')
-    loadSound('./static/sound/se_maoudamashii_onepoint22.mp3')
+    // 非同期でロードされるため明示的に格納インデックスを指定してロードする
+    loadSound(0, './static/sound/base.mp3')
+    loadSound(1, './static/sound/se_maoudamashii_onepoint22.mp3')
   }
   catch(e) {
     console.error(e)
   }
 }
 
-function loadSound(url, cb) {
+function loadSound(index, url) {
   var request = new XMLHttpRequest()
   request.open('GET', url, true)
   request.responseType = 'arraybuffer'
@@ -33,7 +34,7 @@ function loadSound(url, cb) {
   // Decode asynchronously
   request.onload = function() {
     context.decodeAudioData(request.response, function(buffer) {
-      bufferList[bufferList.length] = buffer
+      bufferList[index] = buffer
     }, (err) => {
       console.error(e)
     })
