@@ -22,17 +22,11 @@ function play1() {
 function play2() {
   audio.play('pirori')
 }  
-
+const keymap = {'a':play1, 's':play2}
 function keyDown(e) {
-  if(e.key === 'a') play1()
-  if(e.key === 's') play2()
+  keymap[e.key]()
 }
 
-document.getElementById('btn1').addEventListener('touchstart', function(ev) {
-  play1()
-}, false)
-
-document.getElementById('btn2').addEventListener('touchstart', function(ev) {
-  play2()
-}, false)
+document.getElementById('btn1').addEventListener('touchstart', play1)
+document.getElementById('btn2').addEventListener('touchstart', play2)
 
