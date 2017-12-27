@@ -1,6 +1,6 @@
-# sound-play-sample
+# Web Audio API で音を再生するデモです
 
-## DEMO
+## DEMOページ
 https://tori2.github.io/sound-play-sample/
 
 #### サウンド
