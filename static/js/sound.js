@@ -62,3 +62,13 @@ function keyDown(e) {
   if(e.key === 'a') play1()
   if(e.key === 's') play2()
 }
+
+
+document.getElementById('btn1').addEventListener('touchstart', function(ev) {
+  play1()
+}, false)
+
+document.getElementById('btn2').addEventListener('touchstart', function(ev) {
+  play2()
+}, false)
+

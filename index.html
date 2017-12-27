@@ -2,12 +2,31 @@
 <html>
   <head>
     <meta charset=utf-8>
-    <title>sound-sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>sound-sample</title>
+    <style>
+      div{
+        width:100px;
+        height:100px;
+        color: white;
+        float:left;
+      }
+      div.a{
+        background-color: green;
+      }
+      div.b{
+        background-color: blue;
+      }
+    </style>
   <body>
     <h1>Sound Play DEMO ver 0.0.3</h1>
     <ul>
       <li>キー「a」「s」でサウンド再生するデモです。</li>
     </ul>
+
+    <div id="btn1" class="a">touch a</div>
+    <div id="btn2" class="b">touch b</div>
   <script type=text/javascript src=./static/js/sound.js?a=3></script>
 </body>
 </html>
