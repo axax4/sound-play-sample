@@ -78,7 +78,7 @@ function keyDown(e) {
   if(e.key === 'a') {
     play1()
   }
-  if(e.key === 'b') {
+  if(e.key === 's') {
     play2()
   }
 }
