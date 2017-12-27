@@ -47,8 +47,8 @@ console.log('*loadSound')
 function decode(){
 console.log('*decode')
   try {
-    loadSound('./static/base.mp3')
-    loadSound('./static/se_maoudamashii_onepoint22.mp3')
+    loadSound('./static/sound/base.mp3')
+    loadSound('./static/sound/se_maoudamashii_onepoint22.mp3')
   }
   catch(e) {
     console.error(e)
