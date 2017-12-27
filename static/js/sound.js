@@ -68,3 +68,17 @@ function play1() {
 function play2() {
   playSound(bufferList[1])
 }  
+
+
+document.addEventListener('keydown', keyDown);
+
+function keyDown(e) {
+  console.log('keydown', e.key)
+
+  if(e.key === 'a') {
+    play1()
+  }
+  if(e.key === 'b') {
+    play2()
+  }
+}
