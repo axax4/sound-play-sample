@@ -1,7 +1,7 @@
 # sound-play-sample
 
-# DEMO
+## DEMO
 https://tori2.github.io/sound-play-sample/
 
-# サウンド
+#### サウンド
 魔王魂:http://maoudamashii.jokersounds.com/
