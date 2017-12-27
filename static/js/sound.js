@@ -42,7 +42,6 @@ function loadSound(index, url) {
   request.send()
 }
 
-
 function playSound(buffer) {
   var source = context.createBufferSource() // creates a sound source
   source.buffer = buffer                    // tell the source which sound to play
@@ -53,21 +52,16 @@ function playSound(buffer) {
 document.addEventListener('keydown', keyDown)
 
 function play1() {
-  p.textContent = 'play1'
   playSound(bufferList[0])
 }  
 function play2() {
-  p.textContent = 'play2'
   playSound(bufferList[1])
 }  
-
 
 function keyDown(e) {
   if(e.key === 'a') play1()
   if(e.key === 's') play2()
 }
-
-var p = document.getElementById('text');
 
 document.getElementById('btn1').addEventListener('touchstart', function(ev) {
   play1()
