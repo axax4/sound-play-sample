@@ -50,9 +50,11 @@ function playSound(buffer) {
 }
 
 function play1() {
+  console.log('play1');
   playSound(bufferList[0])
 }  
 function play2() {
+  console.log('play2');
   playSound(bufferList[1])
 }  
 
