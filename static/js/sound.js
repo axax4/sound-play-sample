@@ -10,8 +10,8 @@ function init() {
     alert('Web Audio API is not supported in this browser')
     return
   }
-  audio.loadSound({url: './static/base.mp3'})
-  audio.loadSound({key:'pirori', url: './static/se_maoudamashii_onepoint22.mp3'})
+  audio.loadSound({url: './static/sound/base.mp3'})
+  audio.loadSound({key:'pirori', url: './static/sound/se_maoudamashii_onepoint22.mp3'})
 }
 
 document.addEventListener('keydown', keyDown)
