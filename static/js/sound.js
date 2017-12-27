@@ -49,22 +49,24 @@ function playSound(buffer) {
   source.start(0)                           // play the source now
 }
 
+document.addEventListener('keydown', keyDown)
+
 function play1() {
-  console.log('play1');
+  p.textContent = 'play1'
   playSound(bufferList[0])
 }  
 function play2() {
-  console.log('play2');
+  p.textContent = 'play2'
   playSound(bufferList[1])
 }  
 
-document.addEventListener('keydown', keyDown)
 
 function keyDown(e) {
   if(e.key === 'a') play1()
   if(e.key === 's') play2()
 }
 
+var p = document.getElementById('text');
 
 document.getElementById('btn1').addEventListener('touchstart', function(ev) {
   play1()
