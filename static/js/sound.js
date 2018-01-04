@@ -24,7 +24,8 @@ function play2() {
 }  
 const keymap = {'a':play1, 's':play2}
 function keyDown(e) {
-  keymap[e.key]()
+  let f = keymap[e.key]
+  if (f) f()
 }
 
 document.getElementById('btn1').addEventListener('touchstart', play1)
