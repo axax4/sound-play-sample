@@ -17,7 +17,7 @@ function init() {
 document.addEventListener('keydown', keyDown)
 let vol = document.getElementById('vol')
 function play1() {
-  audio.play({key:'base', volume:vol.value})
+  audio.play({key:'base', volume:0})
 }  
 function play2() {
   audio.play({key:'pirori', volume:vol.value})
