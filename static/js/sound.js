@@ -1,7 +1,6 @@
 const audio = new Audio()
 
 window.addEventListener('load', init, false)
-
 function init() {
   try {
     audio.init()
@@ -16,8 +15,13 @@ function init() {
 
 document.addEventListener('keydown', keyDown)
 let vol = document.getElementById('vol')
+let volLabel = document.getElementById('vol-lbl')
+vol.addEventListener('change', ()=> {
+  volLabel.textContent = vol.value
+})
+
 function play1() {
-  audio.play({key:'base', volume:0})
+  audio.play({key:'base', volume:vol.value})
 }  
 function play2() {
   audio.play({key:'pirori', volume:vol.value})
