@@ -19,6 +19,10 @@ let volLabel = document.getElementById('vol-lbl')
 vol.addEventListener('change', ()=> {
   volLabel.textContent = vol.value
 })
+vol.addEventListener('mousemove', ()=> {
+  volLabel.textContent = vol.value
+})
+
 
 function play1() {
   audio.play({key:'base', volume:vol.value})
