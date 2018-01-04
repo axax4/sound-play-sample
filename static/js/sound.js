@@ -15,12 +15,12 @@ function init() {
 }
 
 document.addEventListener('keydown', keyDown)
-
+let vol = document.getElementById('vol')
 function play1() {
-  audio.play('base')
+  audio.play({key:'base', volume:vol.value})
 }  
 function play2() {
-  audio.play('pirori')
+  audio.play({key:'pirori', volume:vol.value})
 }  
 const keymap = {'a':play1, 's':play2}
 function keyDown(e) {

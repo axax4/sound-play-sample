@@ -30,14 +30,24 @@ class Audio {
     }
     request.send()
   }
-  playSound(buffer) {
-    var source = this.context.createBufferSource() // creates a sound source
-    source.buffer = buffer                    // tell the source which sound to play
-    source.connect(this.context.destination)       // connect the source to the context's destination (the speakers)
-    source.start(0)                           // play the source now
+  playSound({buffer, volume}) {
+    var source = this.context.createBufferSource()
+    source.buffer = buffer
+    source.connect(this.context.destination)
+
+    // volume
+    var gainNode = this.context.createGain()
+    source.connect(gainNode)
+    gainNode.connect(this.context.destination)
+    gainNode.gain.value = volume || 0
+
+    // 再生終了イベント
+    // source.onended = function() {}
+
+    source.start(0)
   }
-  play(key){
-    this.playSound(this.buffer[key])
+  play({key, volume}){
+    this.playSound({buffer:this.buffer[key], volume})
   }
   
 }
