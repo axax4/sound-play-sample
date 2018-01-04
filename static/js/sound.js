@@ -1,4 +1,6 @@
 const audio = new Audio()
+const vol = document.getElementById('vol')
+const volLabel = document.getElementById('vol-lbl')
 
 window.addEventListener('load', init, false)
 function init() {
@@ -14,8 +16,6 @@ function init() {
 }
 
 document.addEventListener('keydown', keyDown)
-let vol = document.getElementById('vol')
-let volLabel = document.getElementById('vol-lbl')
 vol.addEventListener('change', ()=> {
   volLabel.textContent = vol.value
 })
