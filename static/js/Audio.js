@@ -33,7 +33,6 @@ class Audio {
   playSound({buffer, volume}) {
     var source = this.context.createBufferSource()
     source.buffer = buffer
-    source.connect(this.context.destination)
 
     // volume
     var gainNode = this.context.createGain()
