@@ -30,13 +30,18 @@ class Audio {
     }
     request.send()
   }
-  playSound({buffer, volume}) {
+  playSound({buffer, volume, pan}) {
     var source = this.context.createBufferSource()
     source.buffer = buffer
 
+    // pan
+    var panNode = this.context.createStereoPanner();
+    panNode.pan.value = pan || 0 // left:-1 right:1
+    source.connect(panNode)
+    
     // volume
     var gainNode = this.context.createGain()
-    source.connect(gainNode)
+    panNode.connect(gainNode)
     gainNode.connect(this.context.destination)
     gainNode.gain.value = volume || 0
 

@@ -1,5 +1,6 @@
 const audio = new Audio()
 const vol = document.getElementById('vol')
+const pan = document.getElementById('pan')
 const volLabel = document.getElementById('vol-lbl')
 
 window.addEventListener('load', init, false)
@@ -25,10 +26,10 @@ vol.addEventListener('mousemove', ()=> {
 
 
 function play1() {
-  audio.play({key:'base', volume:vol.value})
+  audio.play({key:'base', volume:vol.value, pan:pan})
 }  
 function play2() {
-  audio.play({key:'pirori', volume:vol.value})
+  audio.play({key:'pirori', volume:vol.value, pan:pan})
 }  
 const keymap = {'a':play1, 's':play2}
 function keyDown(e) {
