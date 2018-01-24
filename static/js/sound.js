@@ -26,10 +26,10 @@ vol.addEventListener('mousemove', ()=> {
 
 
 function play1() {
-  audio.play({key:'base', volume:vol.value, pan:pan})
+  audio.play({key:'base', volume:vol.value, pan:pan.value})
 }  
 function play2() {
-  audio.play({key:'pirori', volume:vol.value, pan:pan})
+  audio.play({key:'pirori', volume:vol.value, pan:pan.value})
 }  
 const keymap = {'a':play1, 's':play2}
 function keyDown(e) {
