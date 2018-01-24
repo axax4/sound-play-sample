@@ -50,8 +50,8 @@ class Audio {
 
     source.start(0)
   }
-  play({key, volume}){
-    this.playSound({buffer:this.buffer[key], volume})
+  play({key, volume, pan}){
+    this.playSound({buffer:this.buffer[key], volume, pan})
   }
   
 }
